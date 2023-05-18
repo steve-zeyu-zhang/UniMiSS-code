@@ -25,14 +25,14 @@ pip install -e .
 ### 2. Training 
 cd MiTnnu/MiTnnu/run
 
-* Run `MKL_NUM_THREADS=1,NUMEXPR_NUM_THREADS=1,OMP_NUM_THREADS=1 python -u run_training.py --deterministic -gpu='0' -network='3d_fullres' \
--network_trainer='TrainerV2_BCV' -task='17' -outpath='UniMiss' -norm_cfg='IN' -activation_cfg='LeakyReLU' -epochs=100 \
--pre_train -pre_path='/path/UniMiss_small.pth'` for training.
+* Run `MKL_NUM_THREADS=1,NUMEXPR_NUM_THREADS=1,OMP_NUM_THREADS=1 python -u run_training.py --deterministic -gpu=0 -network=3d_fullres 
+-network_trainer=TrainerV2_BCV -task=17 -outpath=UniMiss -norm_cfg=IN -activation_cfg=LeakyReLU -epochs=100 
+-pre_train -pre_path=/path/UniMiss_small.pth` for training.
 
 ### 3. Validation 
 * Run `MKL_NUM_THREADS=1,NUMEXPR_NUM_THREADS=1,OMP_NUM_THREADS=1 python -u run_training.py --deterministic -gpu='0' -network='3d_fullres' \
 -network_trainer='TrainerV2_BCV' -task='17' -outpath='UniMiss' -norm_cfg='IN' -activation_cfg='LeakyReLU' -epochs=100 \
--pre_train -pre_path='/path/UniMiss_small.pth' -val --val_folder='validation_output` for validation.
+-pre_train -pre_path='/path/to/UniMiss_small.pth' -val --val_folder='validation_output` for validation.
 
 ### 4. Acknowledgements
 Part of codes are reused from the [nnU-Net](https://github.com/MIC-DKFZ/nnUNet). Thanks to Fabian Isensee for the codes of nnU-Net.
