@@ -7,8 +7,6 @@
 * Install nnUNet and MiTnnu as below
   
 ```
-Download nnUNet from the link https://github.com/YtongXie/CoTr/tree/main/nnUNet.
-
 cd nnUNet
 pip install -e .
 
