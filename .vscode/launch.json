@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Python: unimiss",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/UniMiSS/Downstream/MiTnnu/MiTnnu/run/run_training.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {"MKL_NUM_THREADS":"1", "NUMEXPR_NUM_THREADS":"1", "OMP_NUM_THREADS":"1"},
+            "args": ["--deterministic", "-gpu=0", "-network=3d_fullres", 
+             "-network_trainer=TrainerV2_BCV", "-task=92", "-outpath=UniMiss", 
+            "-norm_cfg=IN", "-activation_cfg=LeakyReLU", "-epochs=100", "-pre_train", "-pre_path=/code/UniMiSS-code/UniMiSS/checkpoints/UniMiss_small.pth"]
+        }
+    ]
+}
