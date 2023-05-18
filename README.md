@@ -13,6 +13,9 @@ Torchvision 0.8.2<br />
 
 
 ## Usage
+<!-- 
+########################################################## This is commented out. ##################################################
+
 
 ### Installation
 * Clone this repo
@@ -28,7 +31,7 @@ conda activate UniMiSS
 ```
 
 * Install dependencies as below
-  
+
 ```
 pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
 pip install batchgenerators==0.21
@@ -49,6 +52,15 @@ pip install tensorboard==2.5.0
 pip install torchio==0.18.39
 pip install timm
 ```
+########################################################## This is commented out. ##################################################
+-->
+
+### Docker
+
+```
+docker pull stevezeyuzhang/unimiss:1.7.1
+```
+
 
 ### Data Preparation
 * cd UniMiSS/data
